@@ -21,10 +21,10 @@ the prompt with the corrupted subject through the model and patching with the no
 
 #### <ins>Shuffling Embeddings of the Subject (Patching Bad State with Good State)</ins>
 
-## lit-review
+## <ins>lit-review</ins>
 See this google doc for relevant literature.
 
-## to-do
+## <ins>to-do</ins>
 <ol>
   <li>Get access to stats computing cluster and run on X GPU (currently I am running experiments on this GPU in google collab). </li>
   <li>Parallelize Causual Tracing.</li>
