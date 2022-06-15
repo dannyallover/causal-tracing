@@ -4,7 +4,7 @@
 
 For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implement various hooks for our usage.
 
-### <u>Causal Tracing</u>
+<u>Causal Tracing</u>
 
 We perform causal tracing on [GPT2-Large](https://huggingface.co/gpt2-large) as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al., and we use the following [dataset](https://drive.google.com/file/d/1u6wKzi26vvQ18LlD7UtIZnQxmIjNsCFn/view).
 
