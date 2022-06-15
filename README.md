@@ -26,6 +26,8 @@ See this google doc for relevant literature.
 
 ## <ins>to-do</ins>
 <ol>
-  <li>Get access to stats computing cluster and run on X GPU (currently I am running experiments on this GPU in google collab). </li>
+  <li>Get access to stats computing cluster and run on X GPU (currently I am running experiments on Y GPU in google collab). </li>
+  <li>Run experimetns on GPT-J once above is done.</li>
   <li>Parallelize Causual Tracing.</li>
+  <li>Run experiments on all 1000 examples once above is done. </li>
 </ol>
