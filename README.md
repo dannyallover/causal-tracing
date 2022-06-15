@@ -2,7 +2,7 @@
 
 ## <ins>Experiments</ins>
 
-For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implement various hooks for our usage.
+For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implement various hooks for our usage. For now we are using an edited forked version, since the main version has some [issues](link).
 
 ### <ins>Causal Tracing</ins>
 
