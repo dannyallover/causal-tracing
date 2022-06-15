@@ -21,6 +21,8 @@ the prompt with the corrupted subject through the model and patching with the no
 
 #### <ins>Shuffling Embeddings of the Subject (Patching Bad State with Good State)</ins>
 
+## lit-review
+See this google doc for relevant literature.
 
 ## to-do
 <ol>
