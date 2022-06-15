@@ -20,3 +20,10 @@ the prompt with the corrupted subject through the model and patching with the no
 #### <ins>Random Gaussian Embedding Subject Corruption (Patching Bad State with Good State)</ins>
 
 #### <ins>Shuffling Embeddings of the Subject (Patching Bad State with Good State)</ins>
+
+
+## to-do
+<ol>
+  <li>Get access to stats computing cluster and run on X GPU (currently I am running experiments on this GPU in google collab). </li>
+  <li>Parallelize Causual Tracing.</li>
+</ol>
