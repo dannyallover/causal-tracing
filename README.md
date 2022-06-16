@@ -34,10 +34,10 @@ the prompt with the corrupted subject through the model and patching with the no
 
 #### <ins>Prefix with False Facts</ins>
 
-## <ins>lit-review</ins>
+## <ins>Relevant Literature</ins>
 See this [doc](link) for notes on relevant literature.
 
-## <ins>to-do</ins>
+## <ins>to-do:</ins>
 <ol>
   <li>Get SCF access and access to Balrog (40GB) so you can run experiments on GTP-J (currently I am running experiments on Y GPU in google collab). </li>
   <li>Run experimetns on GPT-J once above is done.</li>
