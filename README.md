@@ -12,7 +12,7 @@ We perform causal tracing on [GPT2-Large](https://huggingface.co/gpt2-large) as 
 We took 100 examples, and for each example we corrupt the subject by adding gaussian noise. We then perform causual tracing, restoring each state with its non-corrupted counterpart. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/indirect_effect_100_examples.pdf) are the complete results of the indirect effect, $p_{\*,h_{i}^{l}}(token) - p_{\*}(token)$, on 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/average_indirect_effect_100_examples.pdf) are the results of the average indirect effect across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/standard_deviation_at_each_site.pdf) is the standard deivation of the indirect effect across the 100 examples.
 <br>
 <br>
-<ins>observations</ins>
+<ins>observations:</ins>
 [Some](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/last_subject_token.pdf) examples match the last subject token/late site phenomena pretty well. [Some](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/second_to_last_subject_token.pdf) examples have high indirect effect at the second to last subject token. [Some](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/no_consistency.pdf) examples seem to have no consistency. The results from averaging the indirect effect across 100 examples seems to align with the results from the ROME paper (it's not quite the same but perhaps that's because we didn't use 1000 examples). The magnitude of the standard deviation seems to correlate with the early/late site phenomena; not sure what to make of that.
 
 #### <ins>Gaussian Noise Subject Corruption (Patching Good State with Bad State)</ins>
@@ -20,7 +20,7 @@ We took 100 examples and corrupted the subject by adding gaussian noise as we di
 the prompt with the corrupted subject through the model and patching with the non-corrupted states, we instead do the opposite. That is, we run the vanilla prompt through the model and patch each state with its corresponding corrupted state. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subect_patch_good_with_bad/indirect_effect_100_examples.pdf) are the results of measuring the indirect effect, $p_{h\*\_{i}^{l}}(token) - p(token)$, across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subect_patch_good_with_bad/average_indirect_effect_100_examples.pdf) are the results of the average indirect effect across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subect_patch_good_with_bad/standard_deviation_at_each_site.pdf) is the standard deivation of the indirect effect across the 100 examples.
 <br>
 <br>
-<ins>observations</ins>
+<ins>observations:</ins>
 
 #### <ins>Varying Gaussian Noise Subject Corruption</ins>
 
