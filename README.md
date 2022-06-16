@@ -22,7 +22,7 @@ the prompt with the corrupted subject through the model and patching with the no
 <br>
 <ins>observations:</ins>
 
-#### Addendum on Above 2 Experiments: <ins>Indirect Effect Wrong Directionn</ins>
+#### Addendum on Above 2 Experiments: <ins>Indirect Effect Wrong Direction</ins>
 
 #### <ins>Varying Gaussian Noise Subject Corruption</ins>
 
