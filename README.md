@@ -30,7 +30,7 @@ the prompt with the corrupted subject through the model and patching with the no
 
 #### <ins>Shuffling Embeddings of the Subject</ins>
 
-#### <ins>Adding Non-Confusing Prefix to the Subject</ins>
+#### <ins>Adding Non-Confusing Prefix to the Subject (deprioritized)</ins>
 
 #### <ins>Prefix with False Facts</ins>
 
