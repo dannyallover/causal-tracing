@@ -9,16 +9,16 @@ For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), wh
 We perform causal tracing on [GPT2-Large](https://huggingface.co/gpt2-large) as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al., and we use the following [dataset](https://drive.google.com/file/d/1u6wKzi26vvQ18LlD7UtIZnQxmIjNsCFn/view).
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
-We took 100 examples, and for each example we corrupt the subject by adding gaussian noise. We then perform causual tracing, restoring each state with its non-corrupted counterpart. 
-
-![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/last_subject_token.png))
-
+We took 100 examples, and for each example we corrupt the subject by adding gaussian noise. We then perform causual tracing, restoring each state with its non-corrupted counterpart.
 <br>
 <br>
 [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/causal_tracing_subject_with_gaussian_noise.pdf) are the complete results of the indirect effect (p*,h(token) - p*(token)) on 100 examples.
 <br>
 Some examples match the last subject token/late site phenomena pretty well. For example:
+![alt text](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/last_subject_token.png)
+<br>
 Other examples have high indirect effect at the second to last subject token. For example:
+<br>
 Other examples seem to have no consistency. For example:
 
 
