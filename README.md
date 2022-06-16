@@ -10,6 +10,9 @@ We perform causal tracing on [GPT2-Large](https://huggingface.co/gpt2-large) as 
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
 We took 100 examples, and for each example we corrupt the subject by adding gaussian noise. We then perform causual tracing, restoring each state with its non-corrupted counterpart. 
+
+![alt text]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/last_subject_token.png))
+
 <br>
 <br>
 [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/causal_tracing_subject_with_gaussian_noise.pdf) are the complete results of the indirect effect (p*,h(token) - p*(token)) on 100 examples.
