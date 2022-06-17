@@ -45,5 +45,4 @@ See this [doc](link) for notes on relevant literature.
   <li>Run experimetns on GPT-J once above is done.</li>
   <li>Parallelize Causual Tracing.</li>
   <li>Run experiments on all 1000 examples once above is done. </li>
-  <li>Measure how often the indirect effect is in the wrong direction. </li>
 </ol>
