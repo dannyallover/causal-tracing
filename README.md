@@ -50,6 +50,11 @@ While the previous experiment still obeyed the phenomenom we've been seeing, thi
 #### <ins>[deprioritized] Adding Non-Confusing Prefix to the Subject</ins>
 
 #### <ins>Prefix with False Facts</ins>
+We use the following non-cofusing prefix: `'Beats Music is owned by Apple. Audible.com is owned by Amazon. Catalonia belongs to the continent of Europe.'`. And we use the following confusing prefix: `'Beats Music is owned by Microsoft. Audible.com is owned by Google. Catalonia belongs to the continent of America.'` We then get internal states for the concatenation `[non-confusing prefix; prompt]` and get internal states for the concatenation `[confusing prefix; prompt]`, and for each internal state, replace its value in the first by its value in the second at each site. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/confusing_prefix/indirect_effect_25_examples.pdf) are the results of the indirect effect at each site for 25 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/confusing_prefix/average_indirect_effect_25_examples.pdf) are the results of the average indirect effect across the 25 examples.
+<br>
+<br>
+<ins>observations:</ins>
+The first notable thing we see is that there is high indirect effect at the facts. We also see something very interesting: the earlier the fact is in the prefix, the less impact it has, while the later the fact is in the prefix the more of an impact it has.
 
 ## <ins>Relevant Literature</ins>
 See this [doc](link) for notes on relevant literature.
