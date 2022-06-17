@@ -36,7 +36,18 @@ What we see is what we expect: adding little guassian noise has less effect on p
 #### <ins>Random Gaussian Embedding Subject Corruption</ins>
 Another experiment we performed was to replace the subject with a random guassian embedding. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_embedding_subject/indirect_effect_100_examples.pdf) are the results of the indirect effect on 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_embedding_subject/average_indirect_effect_100_examples.pdf) is the average of the indirect effect across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_embedding_subject/standard_deviation_at_each_site.pdf) is the standard deviation at each site.
 
+<br>
+<br>
+<ins>observations:</ins>
+The results show that the last subject token/late site phenomenon is still present, although it is more subtle.
+
 #### <ins>Shuffling Embeddings of the Subject</ins>
+The last non-prefix experiment we performed was to shuffle the subject embeddings. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/shuffle_subject_embeddings/indirect_effect_100_examples.pdf) are the results of the indirect effect on 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/shuffle_subject_embeddings/average_indirect_effect_100_examples.pdf) is the average of the indirect effect across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/shuffle_subject_embeddings/standard_deviation_at_each_site.pdf) is the standard deviation at each site.
+
+<br>
+<br>
+<ins>observations:</ins>
+While the previous experiment still obeyed the phenomenom we've been seeing, this experiment finally breaks it. We see no consistency in both the average indirect effect and the standard deviation. It is probably the case that shuffling subject embeddings is more confusing (adversarial, let's say) than simply replacing with something random.
 
 #### <ins>[deprioritized] Adding Non-Confusing Prefix to the Subject</ins>
 
