@@ -27,6 +27,12 @@ Like the previous experiment, [some](https://github.com/dannyallover/gpt_interp/
 What I've observed in the above two experiments (especially when we patch the good state with the bad), is that the indirect effect goes in the opposite direction. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/indirect_effect_wrong_direction/indirect_effect_wrong_direction.pdf) is the percentage at which each site goes in the opposite direction for the first experiment. I'm not sure why the indirect effect would go in the opposite direction; however, there is a pattern to it: the indirect effect is less likely to go in the opposite direction at the last subject token/late site phenomenom. This could be explained by the fact that these sites are critical in predicting the token, so patching these areas lead to improvement more often. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/indirect_effect_wrong_direction/indirect_effect_opposite_direction_patch_good_with_bad.pdf) are the same results for the second experiment. This also follows the last subject/late site pattern, but there are two additional naunces here: the first subject token is much more vulnerable in going in the opposite direction (I noted this in the observations in experiment two), and also the very last site will never go in the opposite direction.
 
 #### <ins>Varying Gaussian Noise Subject Corruption</ins>
+We sought to find out the effect of varyign the amount of guassian noise added to the subject. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/different_amounts_gaussian_noise_subject/indirect_effect_10_examples.pdf) are the results of the indirect effect on 10 examples where we vary the standard deviation by the following amounts: `[0.000001, 0.001, 0.01, 0.1, 0.5, 1, 1.5, 2.5, 5, 10, 100, 1000000]`.
+
+<br>
+<br>
+<ins>observations:</ins>
+What we see is what we expect: adding little guassian noise has less effect on predicting the token vs adding a large amount of guassian noise. In fact, when you add a large amount of guassian noise, patching does not really make a difference.
 
 #### <ins>Random Gaussian Embedding Subject Corruption</ins>
 
