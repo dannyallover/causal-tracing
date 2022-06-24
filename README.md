@@ -1,8 +1,14 @@
 # gpt_interp
 
-## <ins>Experiments</ins>
+# <ins>Experiments</ins>
 
-For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implements various hooks for our usage. For now we are using an edited forked version, since the main version has some [issues](link).
+For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implements various hooks for our usage. We modify various hooks, add our own, as well as add various utility functions for our purposes.
+
+## <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
+
+## <ins>[gpt-xl](https://huggingface.co/gpt2-xl)</ins>
+
+## <ins>[gpt-large](https://huggingface.co/gpt2-large)</ins>
 
 ### <ins>Causal Tracing</ins>
 
