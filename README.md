@@ -64,5 +64,5 @@ See this [doc](link) for notes on relevant literature.
 
 ## <ins>to-do:</ins>
 <ol>
-  <li>Run experimetns on GPT-J once above is done.</li>
+  <li>Run experimetns on GPT-J.</li>
 </ol>
