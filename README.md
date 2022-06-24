@@ -17,7 +17,7 @@ To test the robustness of causal tracing, we sought to recreate the ROME results
 <ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect. I think it's close enough where the differences can be attributed to the randomness; however, a closer look at their code base is warranted \[have now done this]\.
 
 #### Addendum on Above Experiment: <ins>Number of Tokens</ins>
-The more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect. Here are the results of the average indirect effect on the 100 prompts with the most amount of tokens. Here are the results of the average indirect effect on the 100 prompts with the most amount of tokens.
+The more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/100_prompts_with_least_tokens_aie.pdf) are the results of the average indirect effect on the 100 prompts with the least amount of tokens. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/100_prompts_with_most_tokens_aie.pdf) are the results of the average indirect effect on the 100 prompts with the most amount of tokens.
 
 ### <ins>[gpt2-large](https://huggingface.co/gpt2-large)</ins>
 
