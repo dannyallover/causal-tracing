@@ -2,15 +2,15 @@
 
 # <ins>Experiments</ins>
 
+
+## <ins>Causal Tracing</ins>
 ## <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
 ## <ins>[gpt-xl](https://huggingface.co/gpt2-xl)</ins>
 
 ## <ins>[gpt-large](https://huggingface.co/gpt2-large)</ins>
 
-### <ins>Causal Tracing</ins>
-
-We perform causal tracing on [GPT2-Large](https://huggingface.co/gpt2-large) as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al., and we use the following [dataset](https://drive.google.com/file/d/1u6wKzi26vvQ18LlD7UtIZnQxmIjNsCFn/view).
+We perform causal tracing on [gpt-large](https://huggingface.co/gpt2-large) as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al., and we use the following [dataset](https://drive.google.com/file/d/1u6wKzi26vvQ18LlD7UtIZnQxmIjNsCFn/view).
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
 We took 100 examples, and for each example we corrupt the subject by adding gaussian noise. We then perform causual tracing, restoring each state with its non-corrupted counterpart. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/indirect_effect_100_examples.pdf) are the complete results of the indirect effect, $p_{\*,h_{i}^{l}}(token) - p_{\*}(token)$, on 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/average_indirect_effect_100_examples.pdf) are the results of the average indirect effect across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/standard_deviation_at_each_site.pdf) is the standard deivation of the indirect effect across the 100 examples.
