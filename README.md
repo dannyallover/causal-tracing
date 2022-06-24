@@ -11,7 +11,7 @@ We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.
 ### <ins>[gpt2-xl](https://huggingface.co/gpt2-xl)</ins>
 
 #### <ins>Reproducing ROME Results</ins>
-To test the robustness of causal tracing, we sought to recreate the ROME results. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/rome_examples.pdf) are the results on the particular examples that they used in the paper in Figure 11. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/average_indirect_effect_1000_examples.pdf) are the results of the average indirect effect on 1000 random examples, which can be compared to theirs in Figure 2.
+To test the robustness of causal tracing, we sought to recreate the ROME results. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/rome_examples.pdf) are the results on the particular examples that they used in the paper in Figure 9. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/average_indirect_effect_1000_examples.pdf) are the results of the average indirect effect on 1000 random examples, which can be compared to theirs in Figure 2.
 <br>
 <br>
 <ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect. I think it's close enough where the differences can be attributed to the randomness; however, a closer look at their code base is warranted \[have now done this]\.
