@@ -2,7 +2,7 @@
 
 # <ins>Experiments</ins>
 
-For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implements various hooks for our usage. We modify various hooks, add our own, as well as add various utility functions for our purposes.
+For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implements various hooks for our usage. We modify various hooks, add our own, as well as add various utility functions for our purposes. We utilize an A100 GPU (40 GB memory).
 
 ## <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
@@ -67,6 +67,8 @@ We use the following non-cofusing prefix: `'Beats Music is owned by Apple. Audib
 
 ## <ins>Relevant Literature</ins>
 See this [doc](link) for notes on relevant literature.
+
+## <ins>Meeting Notes</ins>
 
 ## <ins>to-do:</ins>
 <ol>
