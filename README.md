@@ -2,8 +2,6 @@
 
 # <ins>Experiments</ins>
 
-For our experiments, we use [unseal](https://github.com/TomFrederik/unseal/), which implements various hooks for our usage. We modify various hooks, add our own, as well as add various utility functions for our purposes. We utilize an A100 GPU (40 GB memory).
-
 ## <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
 ## <ins>[gpt-xl](https://huggingface.co/gpt2-xl)</ins>
