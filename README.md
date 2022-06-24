@@ -74,4 +74,7 @@ See this [doc](link) for notes on relevant literature.
 ## <ins>to-do:</ins>
 <ol>
   <li>Run experimetns on GPT-J.</li>
+  <li>Read papers + update relevant literature doc.</li>
+  <li>For each input, get the top 100 predicted tokens and their probabilities for (1) the initial input (2) the corrupted input and (3) all the different patches on the corrupted input.</li>
+  <li>For every heatmap, show p and p*, and have the colors correspond to (p*_h - p*) / (p - p*) * 100.</li>
 </ol>
