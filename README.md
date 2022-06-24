@@ -16,8 +16,8 @@ To test the robustness of causal tracing, we sought to recreate the ROME results
 <br>
 <ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect. I think it's close enough where the differences can be attributed to the randomness; however, a closer look at their code base is warranted \[have now done this]\.
 
-#### Addendum on Above Experiment: <ins>Number of Tokens and Direction</ins>
-After running causal tracing for corrupting the subject in the prompts of 1000 examples, I observed an interesting phenomena: the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; additionally the more tokens in the prompt, the more likely the indirect effect is to go in the opposite direction. Here are the results of the average indirect effect on the 50 prompts with the most amount of tokens. Here are the results of the average indirect effect on the 100 prompts with the most amount of tokens. Here are the results of the average indirect effect on the 50 prompts with the least amount of tokens. Here are the results of the average indirect effect on the 100 prompts with the most amount of tokens.
+#### Addendum on Above Experiment: <ins>Number of Tokens</ins>
+The more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect. Here are the results of the average indirect effect on the 100 prompts with the most amount of tokens. Here are the results of the average indirect effect on the 100 prompts with the most amount of tokens.
 
 ### <ins>[gpt2-large](https://huggingface.co/gpt2-large)</ins>
 
