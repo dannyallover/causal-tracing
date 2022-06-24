@@ -6,9 +6,9 @@
 ## <ins>Causal Tracing</ins>
 ## <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
-## <ins>[gpt-xl](https://huggingface.co/gpt2-xl)</ins>
+## <ins>[gpt2-xl](https://huggingface.co/gpt2-xl)</ins>
 
-## <ins>[gpt-large](https://huggingface.co/gpt2-large)</ins>
+## <ins>[gpt2-large](https://huggingface.co/gpt2-large)</ins>
 
 We perform causal tracing on [gpt-large](https://huggingface.co/gpt2-large) as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al., and we use the following [dataset](https://drive.google.com/file/d/1u6wKzi26vvQ18LlD7UtIZnQxmIjNsCFn/view).
 
