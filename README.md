@@ -64,10 +64,5 @@ See this [doc](link) for notes on relevant literature.
 
 ## <ins>to-do:</ins>
 <ol>
-  <li>Get SCF access and access to Balrog (40GB) so you can run experiments on GTP-J (currently I am running experiments on Y GPU in google collab). </li>
   <li>Run experimetns on GPT-J once above is done.</li>
-  <li>Parallelize Causual Tracing.</li>
-  <li>Run experiments on all 1000 examples once above is done. </li>
-  <li>Submit PR to fix unseal.</li>
-  <li>Read up on papers and take notes (including last paper Jean sent).</li>
 </ol>
