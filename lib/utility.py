@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.colors import BoundaryNorm
 import numpy as np
+from statistics import stdev
 import transformers
 import torch
 
@@ -29,6 +30,43 @@ def plot_results(results: torch.Tensor, x: int, y: List[str], lower_bound: float
     cbar = plt.colorbar(image)
     plt.gca().invert_yaxis()
     cbar.ax.set_title(title, x = 1 + len(title)/6, y = -0.1)
+    
+def subject_corruption_SD(analysis: List[Tuple[torch.Tensor, List[str]]], num_layers: int):
+    SIZE_Y = 6
+    sd = torch.zeros(SIZE_Y, num_layers)
+    prob = [[[] for j in range(num_layers)] for i in range(SIZE_Y)] 
+    for i in range(len(analysis)):
+        tkens = analysis[i][1][1]
+        pre_subject = True
+        j = 0
+        for p in analysis[i][0]:
+            if (j == 0 and tkens[j][-1] == '*') or \
+               (j > 0 and tkens[j][-1] == '*' and tkens[j-1][-1] != '*'): # first subject token
+                index = 0
+                pre_subject = False
+            elif pre_subject: # pre subject token, which we don't count
+                j += 1
+                continue
+            elif tkens[j][-1] == '*' and tkens[j+1][-1] == '*': # middle subject token
+                index = 1
+            elif tkens[j][-1] == '*' and tkens[j+1][-1] != '*': # last subject token
+                index = 2
+            elif tkens[j][-1] != '*' and tkens[j-1][-1] == '*': # first subsequent token
+                index = 3
+            elif j == len(tkens) - 1: # last token
+                index = 5
+            else: # further tokens
+                index = 4
+                
+            for z in range(num_layers):
+                prob[index][z].append(p[z].item())
+            j += 1
+    
+    for i in range(SIZE_Y):
+        for j in range(num_layers):
+            sd[i][j] = stdev(prob[i][j])
+        
+    return sd
     
 def subject_corruption_AIE(analysis: List[Tuple[torch.Tensor, List[str]]], num_layers: int):
     prob = torch.zeros(6, num_layers)
