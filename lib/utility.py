@@ -10,7 +10,6 @@ import torch
 
 def plot_results(results: torch.Tensor, x: int, y: List[str], lower_bound: float, upper_bound: float, \
                  incr: float, title: str, color_schema: str):
-    
     cmap = plt.get_cmap(color_schema)
 
     # extract all colors from the .jet map
