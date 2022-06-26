@@ -76,4 +76,4 @@ We use the following non-cofusing prefix: `'Beats Music is owned by Apple. Audib
 See this [doc](link) for notes on relevant literature.
 
 ## <ins>Meeting Notes</ins>
-[June 8, 2022](https://docs.google.com/document/d/1AYSTCouIr7RLtqp3QVsF0vYSPjPVWPN17EMVT4FmhGc/edit#), [June 13, 2022](https://docs.google.com/document/d/1Cx2fxT-Bps_uRuL94bwzm3t8C52ZHQKNL8D_YJ7-veM/edit), [June 17, 2022](https://docs.google.com/document/d/1eaF6W8vwuPuvw_A8gyrWk0HWgmNWjxpD_Y6ub6C_H84/edit?usp=sharing), [June 22, 2022](https://docs.google.com/document/d/15cQtbwEazYcifch-p45My1RUSVyj-Gm3I8StoCgWjhI/edit#).
+[June 8, 2022](https://docs.google.com/document/d/1AYSTCouIr7RLtqp3QVsF0vYSPjPVWPN17EMVT4FmhGc/edit#), [June 13, 2022](https://docs.google.com/document/d/1Cx2fxT-Bps_uRuL94bwzm3t8C52ZHQKNL8D_YJ7-veM/edit), [June 17, 2022](https://docs.google.com/document/d/1eaF6W8vwuPuvw_A8gyrWk0HWgmNWjxpD_Y6ub6C_H84/edit?usp=sharing), [June 22, 2022](https://docs.google.com/document/d/15cQtbwEazYcifch-p45My1RUSVyj-Gm3I8StoCgWjhI/edit#), [June 24, 2022](https://docs.google.com/document/d/1UKdWlVo22KJiDCO_lDJ28PqGANKE1hbmXOl9QPmG2yY/edit#).
