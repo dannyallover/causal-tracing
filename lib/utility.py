@@ -34,7 +34,7 @@ def subject_corruption_AIE(analysis: List[Tuple[torch.Tensor, List[str]]], num_l
     prob = torch.zeros(6, num_layers)
     count = [0] * 6
     for i in range(len(analysis)):
-        tkens = analysis[i][1]
+        tkens = analysis[i][1][1]
         pre_subject = True
         j = 0
         for p in analysis[i][0]:
