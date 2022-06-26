@@ -20,6 +20,7 @@ To test the robustness of causal tracing, we sought to recreate the ROME results
 The more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/100_prompts_with_least_tokens_aie.pdf) are the results of the average indirect effect on the 100 prompts with the least amount of tokens. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/100_prompts_with_most_tokens_aie.pdf) are the results of the average indirect effect on the 100 prompts with the most amount of tokens.
 
 ### <ins>[gpt2-large](https://huggingface.co/gpt2-large)</ins>
+**\[note: the below experiments were run with two differences in the implementation that the ROME folks use: (1) different gaussian noise to the subject when patching each site and (2) we only used 1 run instead of 10 on each example]**
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
 We took 100 examples, and for each example we corrupt the subject by adding gaussian noise. We then perform causual tracing, restoring each state with its non-corrupted counterpart. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/indirect_effect_100_examples.pdf) are the complete results of the indirect effect, $p_{\*,h_{i}^{l}}(token) - p_{\*}(token)$, on 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/average_indirect_effect_100_examples.pdf) are the results of the average indirect effect across the 100 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/gaussian_noise_subject/standard_deviation_at_each_site.pdf) is the standard deivation of the indirect effect across the 100 examples.
@@ -73,15 +74,7 @@ The first notable thing we see is that there is high indirect effect at the fact
 We use the following non-cofusing prefix: `'Beats Music is owned by Apple. Audible.com is owned by Amazon. Catalonia belongs to the continent of Europe.'`. And we use the following confusing prefix: `'Beats Music is owned by Microsoft. Audible.com is owned by Google. Catalonia belongs to the continent of America.'` We then get internal states for the concatenation `[non-confusing prefix; prompt]` and get internal states for the concatenation `[confusing prefix; prompt]`, and for each internal state (unlike the last experiment), replace its value in the first by its value in the second at each site. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/prefix_false_facts_patch_good_with_bad/indirect_effect_25_examples.pdf) are the results of the indirect effect at each site for 25 examples. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp-large/prefix_false_facts_patch_good_with_bad/average_indirect_effect_25_examples.pdf) are the results of the average indirect effect across the 25 examples.
 
 ## <ins>Relevant Literature</ins>
-See this [doc](link) for notes on relevant literature.
+See this [doc](https://docs.google.com/document/d/1UfnkuGul71ldaep2VNcC8vsLTn-LiVtitKlNlzO-Xg4/edit) for notes on relevant literature.
 
 ## <ins>Meeting Notes</ins>
-[June 8, 2022](https://docs.google.com/document/d/1AYSTCouIr7RLtqp3QVsF0vYSPjPVWPN17EMVT4FmhGc/edit#), [June 13, 2022](https://docs.google.com/document/d/1Cx2fxT-Bps_uRuL94bwzm3t8C52ZHQKNL8D_YJ7-veM/edit), [June 17, 2022](https://docs.google.com/document/d/1eaF6W8vwuPuvw_A8gyrWk0HWgmNWjxpD_Y6ub6C_H84/edit?usp=sharing), [June 22, 2022](https://docs.google.com/document/d/15cQtbwEazYcifch-p45My1RUSVyj-Gm3I8StoCgWjhI/edit#).
-
-## <ins>to-do:</ins>
-<ol>
-  <li>Run experimetns on GPT-J.</li>
-  <li>Read papers + update relevant literature doc.</li>
-  <li>For each input, get the top 100 predicted tokens and their probabilities for (1) the initial input (2) the corrupted input and (3) all the different patches on the corrupted input.</li>
-  <li>For every heatmap, show p and p*, and have the colors correspond to (p*_h - p*) / (p - p*) * 100.</li>
-</ol>
+[June 8, 2022](https://docs.google.com/document/d/1AYSTCouIr7RLtqp3QVsF0vYSPjPVWPN17EMVT4FmhGc/edit#); [June 13, 2022](https://docs.google.com/document/d/1Cx2fxT-Bps_uRuL94bwzm3t8C52ZHQKNL8D_YJ7-veM/edit); [June 17, 2022](https://docs.google.com/document/d/1eaF6W8vwuPuvw_A8gyrWk0HWgmNWjxpD_Y6ub6C_H84/edit?usp=sharing); [June 22, 2022](https://docs.google.com/document/d/15cQtbwEazYcifch-p45My1RUSVyj-Gm3I8StoCgWjhI/edit#); [June 24, 2022](https://docs.google.com/document/d/1UKdWlVo22KJiDCO_lDJ28PqGANKE1hbmXOl9QPmG2yY/edit#).
