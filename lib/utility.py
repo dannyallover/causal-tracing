@@ -30,7 +30,7 @@ def plot_results(results: torch.Tensor, x: int, y: List[str], lower_bound: float
     plt.gca().invert_yaxis()
     cbar.ax.set_title(title, x = 1 + len(title)/6, y = -0.1)
     
-def subject_corruption_SD(analysis: List[Tuple[torch.Tensor, List[str]]], num_layers: int):
+def standard_deviation_sites(analysis: List[Tuple[torch.Tensor, List[str]]], num_layers: int):
     SIZE_Y = 6
     sd = torch.zeros(SIZE_Y, num_layers)
     prob = [[[] for j in range(num_layers)] for i in range(SIZE_Y)] 
@@ -67,7 +67,7 @@ def subject_corruption_SD(analysis: List[Tuple[torch.Tensor, List[str]]], num_la
         
     return sd
     
-def subject_corruption_AIE(analysis: List[Tuple[torch.Tensor, List[str]]], num_layers: int):
+def average_sites(analysis: List[Tuple[torch.Tensor, List[str]]], num_layers: int):
     prob = torch.zeros(6, num_layers)
     count = [0] * 6
     for i in range(len(analysis)):
