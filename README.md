@@ -9,7 +9,7 @@ We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.
 ### <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
-note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token) - p_{\*}(token)|$.
+note: percent improvement := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token) - p_{\*}(token)|$.
 <br>
 [Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
 <br>
@@ -37,7 +37,7 @@ note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token) - 
 <br>
 [Average Indirect Effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/100_prompts_with_most_tokens_aie.pdf).
 
-<ins>observations:</ins> I was curious to see how the indirect effect on particular examples varied on GPT-J vs GPT2-XL, so I [sampled](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/model_comparison/gpt_j_to_gpt2_xl_10_example_comparison.pdf) the same 10 examples for both models. GPT-J seems to have cleaner paintings, higher magnitudes, and less often goes in the opposite direction. The average indirect effect seems to align pretty well with the results in the ROME paper. When analyzing the average percent improvement, there seems to be higher activation at the middle subject token and first subsequent token when compared to the plot of the average indirect effect. Additionally the standard deviation of the indirect effect seems to correlate with the average indirect effect; however, there seems to be less of a correlation with the standard deviation of the percent improve with the average percent improvement. As we observed in gpt-xl, the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect.
+<ins>observations:</ins> I was curious to see how the indirect effect on particular examples varied on GPT-J vs GPT2-XL, so I [sampled](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/model_comparison/gpt_j_to_gpt2_xl_10_example_comparison.pdf) the same 10 examples for both models. GPT-J seems to have cleaner paintings, higher magnitudes, and less often goes in the opposite direction. The average indirect effect seems to align pretty well with the results in the ROME paper. When analyzing the average percent improvement, there seems to be higher activation at the middle subject token and first subsequent token when compared to the plot of the average indirect effect. Additionally the standard deviation of the indirect effect seems to correlate with the average indirect effect; however, there seems to be less of a correlation with the standard deviation of the percent improvement with the average percent improvement. As we observed in gpt-xl, the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect.
 
 ### <ins>[gpt2-xl](https://huggingface.co/gpt2-xl)</ins>
 
