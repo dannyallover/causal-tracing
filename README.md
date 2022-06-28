@@ -42,7 +42,7 @@ note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / p(token) - p
 ### <ins>[gpt2-xl](https://huggingface.co/gpt2-xl)</ins>
 
 #### <ins>Gaussian Noise Subject Corruption [Testing Robustness of ROME Results]</ins>
-[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples.pdf) for ROME figures. [compare this to the results in the ROME paper]
+[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/rome_examples/rome_examples.pdf) for ROME figures. [compare this to the results in the ROME paper]
 <br>
 [Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
 <br>
