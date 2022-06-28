@@ -9,15 +9,15 @@ We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.
 ### <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
-note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / p(token) - p_{\*}(token)$.
+note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token) - p_{\*}(token)|$.
 <br>
-[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
+[Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
 <br>
-[Indirect effect 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples_0_cutoff.pdf) on 100 examples.
+[Indirect Effect 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples_0_cutoff.pdf) on 100 examples.
 <br>
-[Percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/percent_improvement_100_examples.pdf) on 100 examples.
+[Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/percent_improvement_100_examples.pdf) on 100 examples.
 <br>
-[Percent improvement 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/percent_improvement_100_examples_0_cutoff.pdf) on 100 examples.
+[Percent Improvement 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/percent_improvement_100_examples_0_cutoff.pdf) on 100 examples.
 <br>
 [Average Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_average/average_indirect_effect_500_examples.pdf) on 500 random examples. [compare this to the results in ROME paper]
 <br>
@@ -25,13 +25,13 @@ note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / p(token) - p
 <br>
 [Standard Deviation of Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_standard_deviation/standard_deviation_indirect_effect_1000_examples.pdf) on 1000 random examples.
 <br>
-[Average percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_average/average_percent_improvement_1000_examples.pdf) on 1000 random examples.
+[Average Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_average/average_percent_improvement_1000_examples.pdf) on 1000 random examples.
 <br>
 [Standard Deviation of Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_standard_deviation/standard_deviation_percent_improvement_1000_examples.pdf) on 1000 random examples.
 <br>
-[Indirect effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/indirect_effect_100_examples_least_tokens.pdf).
+[Indirect Effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/indirect_effect_100_examples_least_tokens.pdf).
 <br>
-[Indirect effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/indirect_effect_100_examples_most_tokens.pdf).
+[Indirect Effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/indirect_effect_100_examples_most_tokens.pdf).
 <br>
 [Average Indirect Effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/100_prompts_with_least_tokens_aie.pdf).
 <br>
@@ -44,25 +44,25 @@ note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / p(token) - p
 #### <ins>Gaussian Noise Subject Corruption [Testing Robustness of ROME Results]</ins>
 [Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/rome_examples/rome_examples.pdf) for ROME examples. [compare this to the results in the ROME paper]
 <br>
-[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
+[Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
 <br>
-[Indirect effect 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples_0_cutoff.pdf) on 100 examples.
+[Indirect Effect 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples_0_cutoff.pdf) on 100 examples.
 <br>
-[Percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/percent_improvement_100_examples.pdf) on 100 examples.
+[Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/percent_improvement_100_examples.pdf) on 100 examples.
 <br>
-[Percent improvement 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/percent_improvement_100_examples_0_cutoff.pdf) on 100 examples.
+[Percent Improvement 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/percent_improvement_100_examples_0_cutoff.pdf) on 100 examples.
 <br>
 [Average Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_average/average_indirect_effect_1000_examples.pdf) on 1000 examples. [compare this to the results in the ROME paper]
 <br>
 [Standard Deviation of Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_standard_deviation/standard_deviation_indirect_effect_1000_examples.pdf) on 1000 random examples.
 <br>
-[Average percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_average/average_percent_improvement_1000_examples.pdf) on 1000 random examples.
+[Average Percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_average/average_percent_improvement_1000_examples.pdf) on 1000 random examples.
 <br>
 [Standard Deviation of Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_standard_deviation/standard_deviation_percent_improvement_1000_examples.pdf) on 1000 random examples.
 <br>
-[Indirect effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/indirect_effect_100_examples_least_tokens.pdf).
+[Indirect Effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/indirect_effect_100_examples_least_tokens.pdf).
 <br>
-[Indirect effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/indirect_effect_100_examples_most_tokens.pdf).
+[Indirect Effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/indirect_effect_100_examples_most_tokens.pdf).
 <br>
 [Average Indirect Effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/100_prompts_with_least_tokens_aie.pdf).
 <br>
