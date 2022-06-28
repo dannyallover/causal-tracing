@@ -8,16 +8,68 @@ We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.
 
 ### <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
+#### <ins>Gaussian Noise Subject Corruption</ins>
+note: percent improve := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / p(token) - p_{\*}(token)$.
+<br>
+[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
+<br>
+[Indirect effect 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/indirect_effect_100_examples_0_cutoff.pdf) on 100 examples.
+<br>
+[Percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/percent_improvement_100_examples.pdf) on 100 examples.
+<br>
+[Percent improvement 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_examples/percent_improvement_100_examples_0_cutoff.pdf) on 100 examples.
+<br>
+[Average Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_average/average_indirect_effect_500_examples.pdf) on 500 random examples. [compare this to the results in ROME paper]
+<br>
+[Average Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_average/average_indirect_effect_1000_examples.pdf) on 1000 random examples.
+<br>
+[Standard Deviation of Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_standard_deviation/standard_deviation_indirect_effect_1000_examples.pdf) on 1000 random examples.
+<br>
+[Average percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_average/average_percent_improvement_1000_examples.pdf) on 1000 random examples.
+<br>
+[Standard Deviation of Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_standard_deviation/standard_deviation_percent_improvement_1000_examples.pdf) on 1000 random examples.
+<br>
+[Indirect effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/indirect_effect_100_examples_least_tokens.pdf).
+<br>
+[Indirect effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/indirect_effect_100_examples_most_tokens.pdf).
+<br>
+[Average Indirect Effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/100_prompts_with_least_tokens_aie.pdf).
+<br>
+[Average Indirect Effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt-j/subject_corruption_num_tokens/100_prompts_with_most_tokens_aie.pdf).
+
+<ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect (the magnitude doesn't always perfectly align). I think it's close enough where the differences can be attributed to the randomness. We tested this by running the zillow example 50 times which can be found [here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/rome_examples/zillow_50_runs.pdf), and it seems to be the case that the difference in magnitude is due to the variance in noise. Also an interesting phenomena: the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect.
+
 ### <ins>[gpt2-xl](https://huggingface.co/gpt2-xl)</ins>
 
-#### <ins>Reproducing ROME Results</ins>
-To test the robustness of causal tracing, we sought to recreate the ROME results. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/rome_examples.pdf) are the results on the particular examples that they used in the paper in Figure 9. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/average_indirect_effect_1000_examples.pdf) are the results of the average indirect effect on 1000 random examples, which can be compared to theirs in Figure 2.
+#### <ins>Gaussian Noise Subject Corruption [Testing Robustness of ROME Results]</ins>
+[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples.pdf) for ROME figures. [compare this to the results in the ROME paper]
+<br>
+[Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples.pdf) on 100 examples.
+<br>
+[Indirect effect 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/indirect_effect_100_examples_0_cutoff.pdf) on 100 examples.
+<br>
+[Percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/percent_improvement_100_examples.pdf) on 100 examples.
+<br>
+[Percent improvement 0 cutoff](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_examples/percent_improvement_100_examples_0_cutoff.pdf) on 100 examples.
+<br>
+[Average Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_average/average_indirect_effect_1000_examples.pdf) on 1000 examples. [compare this to the results in the ROME paper]
+<br>
+[Standard Deviation of Indirect Effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_standard_deviation/standard_deviation_indirect_effect_1000_examples.pdf) on 1000 random examples.
+<br>
+[Average percent improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_average/average_percent_improvement_1000_examples.pdf) on 1000 random examples.
+<br>
+[Standard Deviation of Percent Improvement](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_standard_deviation/standard_deviation_percent_improvement_1000_examples.pdf) on 1000 random examples.
+<br>
+[Indirect effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/indirect_effect_100_examples_least_tokens.pdf).
+<br>
+[Indirect effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/indirect_effect_100_examples_most_tokens.pdf).
+<br>
+[Average Indirect Effect 100 examples least amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/100_prompts_with_least_tokens_aie.pdf).
+<br>
+[Average Indirect Effect 100 examples most amount of tokens](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/subject_corruption_num_tokens/100_prompts_with_most_tokens_aie.pdf).
 <br>
 <br>
-<ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect. I think it's close enough where the differences can be attributed to the randomness; however, a closer look at their code base is warranted \[have now done this]\.
-
-#### Addendum on Above Experiment: <ins>Number of Tokens</ins>
-The more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/100_prompts_with_least_tokens_aie.pdf) are the results of the average indirect effect on the 100 prompts with the least amount of tokens. [Here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/gtp2-xl/100_prompts_with_most_tokens_aie.pdf) are the results of the average indirect effect on the 100 prompts with the most amount of tokens.
+<ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect (the magnitude doesn't always perfectly align). I think it's close enough where the differences can be attributed to the randomness. We tested this by running the zillow example 50 times which can be found [here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/rome_examples/zillow_50_runs.pdf), and it seems to be the case that the difference in magnitude is due to the variance in noise. Also an interesting phenomena: the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect.
 
 ### <ins>[gpt2-large](https://huggingface.co/gpt2-large)</ins>
 **\[note: the below experiments were run with two differences in the implementation that the ROME folks use: (1) different gaussian noise to the subject when patching each site and (2) we only used 1 run instead of 10 on each example]**
