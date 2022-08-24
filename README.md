@@ -1,4 +1,4 @@
-# gpt_interp
+# causal tracing
 
 # <ins>Experiments</ins>
 
