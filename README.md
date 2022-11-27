@@ -4,7 +4,7 @@
 
 
 ## <ins>Causal Tracing</ins>
-We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al., and we use the following [dataset](https://drive.google.com/file/d/1u6wKzi26vvQ18LlD7UtIZnQxmIjNsCFn/view).
+We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al.
 
 ### <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
