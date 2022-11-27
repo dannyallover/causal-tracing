@@ -6,7 +6,7 @@
 ## <ins>Causal Tracing</ins>
 We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al.
 
-### <ins>[gpt-j-6b](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
+### <ins>[GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
 note: percent improvement := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token) - p_{\*}(token)|$.
@@ -39,7 +39,7 @@ note: percent improvement := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token
 
 <ins>observations:</ins> I was curious to see how the indirect effect on particular examples varied on GPT-J vs GPT2-XL, so I [sampled](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/model_comparison/gpt_j_to_gpt2_xl_10_example_comparison.pdf) the same 10 examples for both models. GPT-J seems to have cleaner paintings, higher magnitudes, and less often goes in the opposite direction (I wonder how much this is a consequence of better tuned sd). The average indirect effect seems to align pretty well with the results in the ROME paper. When analyzing the average percent improvement, there seems to be higher activation at the middle subject token and first subsequent token when compared to the plot of the average indirect effect. Additionally the standard deviation of the indirect effect seems to correlate with the average indirect effect; however, there seems to be less of a correlation with the standard deviation of the percent improvement with the average percent improvement. As we observed in gpt2-xl, the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect.
 
-### <ins>[gpt2-xl](https://huggingface.co/gpt2-xl)</ins>
+### <ins>[GPT2-XL](https://huggingface.co/gpt2-xl)</ins>
 
 #### <ins>Gaussian Noise Subject Corruption [Testing Robustness of ROME Results]</ins>
 [Indirect effect](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/rome_examples/rome_examples.pdf) for ROME examples. [compare this to the results in the ROME paper]
@@ -71,7 +71,7 @@ note: percent improvement := $p_{\*,h_{i}^{l}}(token) - p_{\*}(token) / |p(token
 <br>
 <ins>observations:</ins> The results tend to match up, albeit it's not exactly perfect (the magnitude doesn't always perfectly align). I think it's close enough where the differences can be attributed to the randomness. We tested this by running the zillow example 50 times which can be found [here](https://github.com/dannyallover/gpt_interp/blob/main/causal_tracing/figures/gpt2-xl/rome_examples/zillow_50_runs.pdf), and it seems to be the case that the difference in magnitude is due to the variance in noise. Also an interesting phenomena: the more tokens in the prompt, the less the early site/late site idea holds as observed in the ROME paper; the number of tokens also correlates with the magnitude of the indirect effect.
 
-### <ins>[gpt2-large](https://huggingface.co/gpt2-large)</ins>
+### <ins>[GPT2-Large](https://huggingface.co/gpt2-large)</ins>
 **\[note: the below experiments were run with two differences in the implementation that the ROME folks use: (1) different gaussian noise to the subject when patching each site and (2) we only used 1 run instead of 10 on each example]**
 
 #### <ins>Gaussian Noise Subject Corruption</ins>
