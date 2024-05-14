@@ -1,10 +1,8 @@
-# causal tracing
+# Causal Tracing
+We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al.
+
 
 # <ins>Experiments</ins>
-
-
-## <ins>Causal Tracing</ins>
-We perform causal tracing as described in the [ROME](https://arxiv.org/abs/2202.05262) paper by Meng et al.
 
 ### <ins>[GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B)</ins>
 
